@@ -49,21 +49,21 @@ const xss = require("xss-clean");
 const path = require("path");
 const http = require("http");
 const socketIo = require("socket.io");
-const logger = require("./utils/logger");
+const logger = require("./Utils/logger");
 
 // Load environment variables
 require("dotenv").config();
 
 // Import routes
-const authRoutes = require("./routes/auth");
-const jobRoutes = require("./routes/jobs");
-const applicationRoutes = require("./routes/applications");
-const adminRoutes = require("./routes/admin");
-const userRoutes = require("./routes/users");
+const authRoutes = require("./Routes/authRoutes");
+const jobRoutes = require("./Routes/Jobs");
+const applicationRoutes = require("./Routes/applicationRoutes");
+const adminRoutes = require("./Routes/adminRoutes");
+const userRoutes = require("./Routes/UserRoutes");
 
 // Import middleware
-const errorHandler = require("./middleware/errorHandler");
-const { authenticate } = require("./middleware/auth");
+const errorHandler = require("./Middleware/errorMiddleware");
+const { authenticate } = require("./Middleware/auth");
 
 const app = express();
 const server = http.createServer(app);
@@ -194,12 +194,6 @@ process.on("unhandledRejection", (err) => {
 // Handle uncaught exceptions
 process.on("uncaughtException", (err) => {
   logger.error("UNCAUGHT EXCEPTION! 💥 Shutting down...");
-  logger.error(err.name, err.message); 
+  logger.error(err.name, err.message);
   process.exit(1);
-});   
-
-
-
-
-
-
+});

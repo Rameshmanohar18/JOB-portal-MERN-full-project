@@ -1,0 +1,308 @@
+/* Table Container */
+.table-container {
+  @apply overflow-x-auto rounded-lg border border-gray-200 
+         dark:border-gray-700 shadow-sm;
+}
+
+.table-container-sm {
+  @apply max-h-96 overflow-y-auto;
+}
+
+.table-container-lg {
+  @apply max-h-[600px] overflow-y-auto;
+}
+
+/* Table Base */
+.table {
+  @apply min-w-full divide-y divide-gray-200 dark:divide-gray-700;
+}
+
+.table-auto {
+  @apply w-full table-auto;
+}
+
+.table-fixed {
+  @apply w-full table-fixed;
+}
+
+/* Table Head */
+.table thead {
+  @apply bg-gray-50 dark:bg-gray-900;
+}
+
+.table thead th {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-500 
+         dark:text-gray-400 uppercase tracking-wider;
+}
+
+.table thead th.sortable {
+  @apply cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800;
+}
+
+/* Table Body */
+.table tbody {
+  @apply bg-white dark:bg-gray-800 divide-y divide-gray-200 
+         dark:divide-gray-700;
+}
+
+.table tbody tr {
+  @apply hover:bg-gray-50 dark:hover:bg-gray-700/50 
+         transition-colors duration-150;
+}
+
+.table tbody tr.selected {
+  @apply bg-primary-50 dark:bg-primary-900/20;
+}
+
+.table tbody td {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-800 
+         dark:text-gray-200;
+}
+
+/* Table Cell Variations */
+.table-cell-center {
+  @apply text-center;
+}
+
+.table-cell-right {
+  @apply text-right;
+}
+
+.table-cell-bold {
+  @apply font-semibold;
+}
+
+.table-cell-muted {
+  @apply text-gray-500 dark:text-gray-400;
+}
+
+.table-cell-success {
+  @apply text-success-600 dark:text-success-400;
+}
+
+.table-cell-warning {
+  @apply text-warning-600 dark:text-warning-400;
+}
+
+.table-cell-danger {
+  @apply text-danger-600 dark:text-danger-400;
+}
+
+.table-cell-primary {
+  @apply text-primary-600 dark:text-primary-400;
+}
+
+/* Table Striped */
+.table-striped tbody tr:nth-child(even) {
+  @apply bg-gray-50 dark:bg-gray-900/50;
+}
+
+/* Table Bordered */
+.table-bordered {
+  @apply border-separate border-spacing-0;
+}
+
+.table-bordered th,
+.table-bordered td {
+  @apply border border-gray-200 dark:border-gray-700;
+}
+
+.table-bordered th:first-child,
+.table-bordered td:first-child {
+  @apply border-l-0;
+}
+
+.table-bordered th:last-child,
+.table-bordered td:last-child {
+  @apply border-r-0;
+}
+
+/* Table Compact */
+.table-compact th {
+  @apply px-3 py-2;
+}
+
+.table-compact td {
+  @apply px-3 py-2;
+}
+
+/* Table Large */
+.table-large th {
+  @apply px-8 py-4;
+}
+
+.table-large td {
+  @apply px-8 py-4;
+}
+
+/* Table Actions */
+.table-actions {
+  @apply flex items-center space-x-2;
+}
+
+.table-action-btn {
+  @apply p-1 text-gray-400 hover:text-gray-600 
+         dark:text-gray-500 dark:hover:text-gray-300 
+         rounded transition-colors;
+}
+
+/* Table Status */
+.table-status {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full 
+         text-xs font-medium;
+}
+
+.table-status-success {
+  @apply bg-success-100 text-success-800 dark:bg-success-900 
+         dark:text-success-200;
+}
+
+.table-status-warning {
+  @apply bg-warning-100 text-warning-800 dark:bg-warning-900 
+         dark:text-warning-200;
+}
+
+.table-status-danger {
+  @apply bg-danger-100 text-danger-800 dark:bg-danger-900 
+         dark:text-danger-200;
+}
+
+.table-status-secondary {
+  @apply bg-gray-100 text-gray-800 dark:bg-gray-900 
+         dark:text-gray-200;
+}
+
+/* Table Avatar */
+.table-avatar {
+  @apply flex items-center;
+}
+
+.table-avatar-img {
+  @apply h-8 w-8 rounded-full object-cover;
+}
+
+.table-avatar-content {
+  @apply ml-3;
+}
+
+.table-avatar-name {
+  @apply text-sm font-medium text-gray-900 dark:text-white;
+}
+
+.table-avatar-email {
+  @apply text-sm text-gray-500 dark:text-gray-400;
+}
+
+/* Table Pagination */
+.table-pagination {
+  @apply flex items-center justify-between px-6 py-3 
+         bg-white dark:bg-gray-800 border-t border-gray-200 
+         dark:border-gray-700;
+}
+
+.table-pagination-info {
+  @apply text-sm text-gray-700 dark:text-gray-300;
+}
+
+.table-pagination-controls {
+  @apply flex items-center space-x-2;
+}
+
+.table-pagination-btn {
+  @apply px-3 py-1 border border-gray-300 rounded-md 
+         text-sm font-medium text-gray-700 
+         hover:bg-gray-50 dark:border-gray-600 
+         dark:text-gray-300 dark:hover:bg-gray-700;
+}
+
+.table-pagination-btn-active {
+  @apply bg-primary-600 text-white border-primary-600 
+         hover:bg-primary-700 dark:bg-primary-700 
+         dark:border-primary-700 dark:hover:bg-primary-800;
+}
+
+.table-pagination-btn-disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Table Empty State */
+.table-empty {
+  @apply text-center py-12;
+}
+
+.table-empty-icon {
+  @apply mx-auto h-12 w-12 text-gray-400;
+}
+
+.table-empty-title {
+  @apply mt-2 text-sm font-medium text-gray-900 dark:text-white;
+}
+
+.table-empty-description {
+  @apply mt-1 text-sm text-gray-500 dark:text-gray-400;
+}
+
+/* Table Loading */
+.table-loading {
+  @apply animate-pulse;
+}
+
+.table-loading-row {
+  @apply h-12 bg-gray-200 dark:bg-gray-700 rounded;
+}
+
+/* Table Responsive */
+.table-responsive {
+  @apply block w-full overflow-x-auto;
+}
+
+/* Table with Checkboxes */
+.table-checkbox-cell {
+  @apply w-12 text-center;
+}
+
+.table-checkbox {
+  @apply h-4 w-4 text-primary-600 focus:ring-primary-500 
+         border-gray-300 rounded;
+}
+
+/* Table Sort Indicators */
+.table-sort-indicator {
+  @apply ml-1 inline-block;
+}
+
+.table-sort-asc {
+  @apply transform rotate-180;
+}
+
+.table-sort-desc {
+  @apply transform rotate-0;
+}
+
+/* Table with Expandable Rows */
+.table-expand-row {
+  @apply bg-gray-50 dark:bg-gray-900/30;
+}
+
+.table-expand-content {
+  @apply px-6 py-4;
+}
+
+.table-expand-toggle {
+  @apply p-1 text-gray-400 hover:text-gray-600 
+         dark:text-gray-500 dark:hover:text-gray-300 
+         transition-colors;
+}
+
+/* Table Filter */
+.table-filter {
+  @apply mb-4 flex items-center space-x-4;
+}
+
+.table-filter-input {
+  @apply max-w-xs;
+}
+
+.table-filter-select {
+  @apply max-w-xs;
+}

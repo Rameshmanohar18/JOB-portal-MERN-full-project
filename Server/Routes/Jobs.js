@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const { authenticate, restrictTo } = require("../middleware/auth");
-const jobController = require("../controllers/jobController");
-const applicationController = require("../controllers/applicationController");
+const jobController = require("../Controller/jobController");
+const applicationController = require("../Controller/applicationController");
 
 // Public routes
 router.get("/", jobController.getAllJobs);
